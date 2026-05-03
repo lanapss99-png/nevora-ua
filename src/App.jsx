@@ -144,19 +144,71 @@ const mainServices = [
 ];
 
 const microServices = [
-  ["Single AI Image", "Фінальне Hi-Res зображення для реклами, обкладинки або сайту.", "from $40"],
-  ["AI Retouch / Inpainting", "Заміна об’єктів, корекція деталей, розширення фону, доопрацювання кадру.", "from $30"],
-  ["Visual Style Guide", "Розробка стилістики, напрямку, референсів і промптів для бренду.", "from $100"],
-  ["Single AI Video Clip", "Одна AI-сцена 5–10 секунд у Kling / Flow / Luma за вашим ТЗ.", "from $100"],
-  ["Voiceover up to 1 min", "Голосова озвучка, чистка аудіо та накладання музичного фону.", "from $50"],
-  ["Editing & Color Grading", "Монтаж, кольорокорекція, ритм, маски, переходи та фінальний вигляд ролика.", "from $150"],
-  ["Photo Animation", "Оживлення статичного кадру з плавним рухом і збереженням атмосфери.", "from $60"],
-  ["Vercel Deployment", "Налаштування репозиторію, деплой сайту та підключення домену.", "from $70"],
-  ["Custom Website Section", "Дизайн і верстка одного унікального блоку для сайту.", "from $120"],
-  ["Technical Consultation", "Консультація щодо AI-інструментів, структури сайту або візуального workflow.", "from $50 / hour"],
-  ["Static Ad Banner", "Один статичний рекламний банер для соцмереж або кампанії.", "from $50"],
-  ["Social Video Creative", "Один відео-креатив для Reels, TikTok, Instagram або рекламного запуску.", "from $150"],
-  ["Ad Storyboard", "Структура, сценарій і розкадровка для рекламного ролика.", "from $80"],
+  [
+    "Single AI Image",
+    "Фінальне Hi-Res зображення для реклами, обкладинки або сайту.",
+    "from $40",
+  ],
+  [
+    "AI Retouch / Inpainting",
+    "Заміна об’єктів, корекція деталей, розширення фону, доопрацювання кадру.",
+    "from $30",
+  ],
+  [
+    "Visual Style Guide",
+    "Розробка стилістики, напрямку, референсів і промптів для бренду.",
+    "from $100",
+  ],
+  [
+    "Single AI Video Clip",
+    "Одна AI-сцена 5–10 секунд у Kling / Flow / Luma за вашим ТЗ.",
+    "from $100",
+  ],
+  [
+    "Voiceover up to 1 min",
+    "Голосова озвучка, чистка аудіо та накладання музичного фону.",
+    "from $50",
+  ],
+  [
+    "Editing & Color Grading",
+    "Монтаж, кольорокорекція, ритм, маски, переходи та фінальний вигляд ролика.",
+    "from $150",
+  ],
+  [
+    "Photo Animation",
+    "Оживлення статичного кадру з плавним рухом і збереженням атмосфери.",
+    "from $60",
+  ],
+  [
+    "Vercel Deployment",
+    "Налаштування репозиторію, деплой сайту та підключення домену.",
+    "from $70",
+  ],
+  [
+    "Custom Website Section",
+    "Дизайн і верстка одного унікального блоку для сайту.",
+    "from $120",
+  ],
+  [
+    "Technical Consultation",
+    "Консультація щодо AI-інструментів, структури сайту або візуального workflow.",
+    "from $50 / hour",
+  ],
+  [
+    "Static Ad Banner",
+    "Один статичний рекламний банер для соцмереж або кампанії.",
+    "from $50",
+  ],
+  [
+    "Social Video Creative",
+    "Один відео-креатив для Reels, TikTok, Instagram або рекламного запуску.",
+    "from $150",
+  ],
+  [
+    "Ad Storyboard",
+    "Структура, сценарій і розкадровка для рекламного ролика.",
+    "from $80",
+  ],
 ];
 
 const capabilities = [
@@ -347,6 +399,7 @@ export default function App() {
               height: "auto",
               display: "block",
               margin: "0 auto 18px",
+              borderRadius: "0",
             }}
           />
 
@@ -743,6 +796,15 @@ export default function App() {
             >
               Написати на email
             </a>
+
+            <a
+              href="https://t.me/nevora_ai"
+              target="_blank"
+              rel="noreferrer"
+              style={contactGold}
+            >
+              Telegram @nevora_ai
+            </a>
           </div>
 
           <p style={{ marginTop: "28px", color: "#555", fontSize: "16px" }}>
@@ -1035,6 +1097,17 @@ const contactBlack = {
   padding: "18px 32px",
   fontSize: "16px",
   display: "inline-block",
+};
+
+const contactGold = {
+  background: "#CFB53B",
+  color: "black",
+  textDecoration: "none",
+  borderRadius: "999px",
+  padding: "18px 32px",
+  fontSize: "16px",
+  display: "inline-block",
+  fontWeight: "700",
 };
 
 const telegramButton = {
