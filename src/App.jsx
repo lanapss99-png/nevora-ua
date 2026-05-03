@@ -390,7 +390,7 @@ export default function App() {
 
         <div style={{ maxWidth: "1100px", position: "relative", zIndex: 1 }}>
           <img
-            src="/images/nevora-logo.png"
+            src="/images/nevora-logo-final.png"
             alt="NEVORA AI Creative Studio"
             className="logo-glow hero-logo"
             style={{
