@@ -44,8 +44,8 @@ const productImages = [
     image: "/images/luxury-ring-moss.jpeg",
   },
   {
-    title: "Fashion accessory visual",
-    text: "AI-фотосесія сумки для бренду, Instagram, лукбуку або рекламного запуску.",
+    title: "AI-фотосесія сумки",
+    text: "Візуал для бренду сумок, Instagram, лукбуку або рекламного запуску.",
     image: "/images/red-bag.jpeg",
   },
   {
@@ -107,6 +107,16 @@ const services = [
     title: "Сайт-візитка / Landing page",
     price: "від $600",
     text: "Преміальний односторінковий сайт для бренду, експерта або студії.",
+  },
+  {
+    title: "Лендинг + AI-візуали",
+    price: "від $900",
+    text: "Сайт із готовими AI-зображеннями, візуальною подачею, контактами та базовою адаптацією під мобільний.",
+  },
+  {
+    title: "Преміальний сайт-портфоліо / бренд-лендинг",
+    price: "від $1,200",
+    text: "Сильна структура, тексти, AI-фото, відео, анімації, деплой на Vercel і преміальна подача бренду.",
   },
   {
     title: "Презентація для бізнесу",
@@ -197,10 +207,6 @@ export default function App() {
 
           @media (max-width: 760px) {
             .video-card {
-              grid-template-columns: 1fr !important;
-            }
-
-            .price-row {
               grid-template-columns: 1fr !important;
             }
 
@@ -317,7 +323,7 @@ export default function App() {
                 <div>
                   <p style={smallGold}>{video.label}</p>
                   <h3 style={videoTitle}>{video.title}</h3>
-                  <p style={paragraph}>{video.goal}</p>
+                  <p style={{ ...paragraph, marginBottom: "14px" }}>{video.goal}</p>
                   <p style={paragraph}>{video.description}</p>
                 </div>
               </article>
@@ -362,9 +368,10 @@ export default function App() {
           <h2 style={sectionTitle}>Прості формати для бізнесу.</h2>
 
           <p style={sectionDescription}>
-            Вартість вказана як стартова. Фінальна ціна залежить від складності,
-            дедлайну, кількості матеріалів і правок. Оплата можлива в USD або в
-            гривні за актуальним курсом.
+            Вартість вказана як стартова. Фінальна ціна залежить від структури,
+            кількості блоків, складності візуальної подачі, матеріалів, дедлайну
+            та кількості правок. Оплата можлива в USD або в гривні за актуальним
+            курсом.
           </p>
 
           <div style={servicesGrid}>
