@@ -1,481 +1,285 @@
-const projects = [
+const videoWorks = [
   {
     title: "Audi Q8 e-tron",
-    subtitle: "Естетика майбутнього",
-    category: "AI-відео / Luxury Automotive",
-    image: "/images/audi-q8-cover.jpg.png",
+    label: "ШІ-рекламний ролик для авто",
+    goal: "Ціль: створити преміальний відеокреатив для автомобільного бренду.",
+    description:
+      "Коротке AI-відео з кінематографічною атмосферою, темним преміальним стилем, монтажем, кольором і звуковим настроєм.",
     youtube: "https://www.youtube.com/embed/97CBgS4R8Lk",
-    shortConcept:
-      "Кінематографічна візуалізація преміального електрокара, де технологічна досконалість зустрічається з художньою майстерністю.",
-    conceptTitle: "Концепція: «The future has presence».",
-    concept:
-      "Цей проект — кінематографічна візуалізація преміального електрокара, де технологічна досконалість зустрічається з художньою майстерністю. Основний акцент зроблено на грі світла й тіні, що підкреслює бездоганні текстури металу та футуристичний силует Audi Q8 e-tron.",
-    process:
-      "Створення проекту включало розробку детального сторіборду на 12 сцен та фінальну збірку з акцентом на преміальній динаміці.",
-    tools: [
-      {
-        name: "Візуальна генерація",
-        text: "Kling AI та Flow забезпечили плавність рухів та реалістичність фізики.",
-      },
-      {
-        name: "Сценарій та промптінг",
-        text: "Grok використано для глибокої розробки концепції та візуальних акцентів.",
-      },
-      {
-        name: "Саунд-дизайн",
-        text: "Suno створив унікальний атмосферний аудіосупровід.",
-      },
-      {
-        name: "Пост-продакшн",
-        text: "DaVinci Resolve для професійного грейдингу та досягнення кінематографічного «дорогого» вигляду.",
-      },
-    ],
   },
   {
     title: "Симфонія іржі",
-    subtitle: "Голос життя у світі машин",
-    category: "AI-фільм / Атмосферна візуальна історія",
-    image: "/images/symphony-rust-cover.jpg.jpeg",
+    label: "Атмосферний AI-ролик",
+    goal: "Ціль: показати емоційну історію через візуал, музику та настрій.",
+    description:
+      "Приклад художнього AI-відео з акцентом на атмосферу, образність, ритм і відчуття кінематографічності.",
     youtube: "https://www.youtube.com/embed/3l2LHv8ifUU",
-    shortConcept:
-      "Емоційна візуальна історія про світ, де холодний метал та іржа поглинули все, крім людської душі.",
-    conceptTitle: "Концепція: Мистецтво як символ спротиву та відродження.",
-    concept:
-      "Емоційна візуальна історія про світ, де холодний метал та іржа поглинули все, крім людської душі. Це розповідь про те, як одна нота скрипки здатна розірвати тишу постапокаліпсису та дати життя неоновим квітам.",
-    process:
-      "Наратив побудований на різкому контрасті між похмурим індустріальним середовищем та яскравими елементами «живого» мистецтва. Деталізація емоцій героїні та кібернетичних елементів створює глибоке занурення в сюжет.",
-    tools: [
-      {
-        name: "Відеопродакшен",
-        text: "Kling AI та Flow використані для створення складних сцен із динамічним димом та світловими ефектами.",
-      },
-      {
-        name: "Музична архітектура",
-        text: "Suno згенерував драматичну скрипкову партію, що стала серцем проекту.",
-      },
-      {
-        name: "Креативне керівництво",
-        text: "Grok допоміг сформувати наративну лінію та описи кадрів.",
-      },
-      {
-        name: "Монтаж",
-        text: "DaVinci Resolve застосовано для маскування, кольорокорекції та створення цілісного кінообразу.",
-      },
-    ],
   },
 ];
 
-const mainServices = [
+const productImages = [
   {
-    title: "AI Cinema & Visual Production",
-    description:
-      "Преміальний візуальний контент для брендів, які цінують естетику, якість і сильну атмосферу.",
-    items: [
-      {
-        name: "AI Photo Campaign",
-        details:
-          "Пакет із 5–10 фотореалістичних Hi-Res зображень для соцмереж, сайту або рекламної кампанії.",
-        price: "from $200",
-      },
-      {
-        name: "AI Promo Video",
-        details:
-          "AI-ролик 15–30 секунд: ідея, генерація, монтаж у DaVinci Resolve, саунд-дизайн.",
-        price: "from $500",
-      },
-      {
-        name: "AI Brand Story",
-        details:
-          "Кінематографічний ролик до 60 секунд з глибоким опрацюванням стилю, монтажем та звуковим оформленням.",
-        price: "from $850",
-      },
-    ],
+    title: "Ювелірна AI-фотосесія",
+    text: "Преміальний рекламний кадр для прикрас, Instagram, сайту або каталогу.",
+    image: "/images/jewelry-blue-ring.jpeg",
   },
   {
-    title: "Web Development & Digital Presence",
-    description:
-      "Сучасні, швидкі та візуально чисті сайти для брендів, експертів, студій і преміальних послуг.",
-    items: [
-      {
-        name: "Landing Page Premium",
-        details:
-          "Односторінковий сайт на Vercel з AI-контентом, преміальною візуальною подачею та контактним блоком.",
-        price: "from $600",
-      },
-      {
-        name: "Portfolio / Promo Site",
-        details:
-          "Сайт-візитка для творчих студій, експертів або брендів з акцентом на сильний візуал.",
-        price: "from $800",
-      },
-      {
-        name: "Website Support",
-        details:
-          "Оновлення контенту, технічна підтримка, базові правки та супровід сайту.",
-        price: "from $70 / month",
-      },
-    ],
+    title: "Luxury-зйомка каблучки",
+    text: "Темний дорогий стиль для брендів, яким потрібна сильна візуальна подача.",
+    image: "/images/gold-ring-dark.jpeg",
   },
   {
-    title: "Performance Creatives",
-    description:
-      "Рекламні креативи та візуальні рішення для запусків, соцмереж, PPC-кампаній і продажів.",
-    items: [
-      {
-        name: "PPC Creative Pack",
-        details:
-          "Сет із 5 статичних і 2 відео-креативів для рекламних кампаній у Facebook, Instagram або Google.",
-        price: "from $450",
-      },
-      {
-        name: "Conversion Audit",
-        details:
-          "Аналіз посадкової сторінки та рекомендації щодо покращення візуалу, структури й конверсії.",
-        price: "from $150",
-      },
-      {
-        name: "Complex Performance Design",
-        details:
-          "Візуальна стратегія для запуску нового продукту: креативи, структура, сторінки та рекламна подача.",
-        price: "from $1,000",
-      },
-    ],
+    title: "Казкова подача прикрас",
+    text: "Атмосферний візуал для ювелірних виробів, beauty-брендів і рекламних кампаній.",
+    image: "/images/flower-ring.jpeg",
+  },
+  {
+    title: "AI-фото сережок",
+    text: "Деталізований предметний кадр для каталогу, соцмереж або реклами.",
+    image: "/images/diamond-earrings.jpeg",
+  },
+  {
+    title: "Преміальна рекламна серія",
+    text: "Візуал для товару у стилі luxury campaign: фактури, світло, деталі, атмосфера.",
+    image: "/images/luxury-ring-moss.jpeg",
+  },
+  {
+    title: "Fashion accessory visual",
+    text: "AI-фотосесія сумки для бренду, Instagram, лукбуку або рекламного запуску.",
+    image: "/images/red-bag.jpeg",
+  },
+  {
+    title: "Світлий каталоговий стиль",
+    text: "Чистий product visual для годинників, аксесуарів або premium lifestyle-брендів.",
+    image: "/images/silver-watch.jpeg",
+  },
+  {
+    title: "Lifestyle-фото аксесуарів",
+    text: "Візуал для бренду сумок, одягу, аксесуарів або преміального товару.",
+    image: "/images/black-bag.jpeg",
   },
 ];
 
-const microServices = [
-  [
-    "Single AI Image",
-    "Фінальне Hi-Res зображення для реклами, обкладинки або сайту.",
-    "from $40",
-  ],
-  [
-    "AI Retouch / Inpainting",
-    "Заміна об’єктів, корекція деталей, розширення фону, доопрацювання кадру.",
-    "from $30",
-  ],
-  [
-    "Visual Style Guide",
-    "Розробка стилістики, напрямку, референсів і промптів для бренду.",
-    "from $100",
-  ],
-  [
-    "Single AI Video Clip",
-    "Одна AI-сцена 5–10 секунд у Kling / Flow / Luma за вашим ТЗ.",
-    "from $100",
-  ],
-  [
-    "Voiceover up to 1 min",
-    "Голосова озвучка, чистка аудіо та накладання музичного фону.",
-    "from $50",
-  ],
-  [
-    "Editing & Color Grading",
-    "Монтаж, кольорокорекція, ритм, маски, переходи та фінальний вигляд ролика.",
-    "from $150",
-  ],
-  [
-    "Photo Animation",
-    "Оживлення статичного кадру з плавним рухом і збереженням атмосфери.",
-    "from $60",
-  ],
-  [
-    "Vercel Deployment",
-    "Налаштування репозиторію, деплой сайту та підключення домену.",
-    "from $70",
-  ],
-  [
-    "Custom Website Section",
-    "Дизайн і верстка одного унікального блоку для сайту.",
-    "from $120",
-  ],
-  [
-    "Technical Consultation",
-    "Консультація щодо AI-інструментів, структури сайту або візуального workflow.",
-    "from $50 / hour",
-  ],
-  [
-    "Static Ad Banner",
-    "Один статичний рекламний банер для соцмереж або кампанії.",
-    "from $50",
-  ],
-  [
-    "Social Video Creative",
-    "Один відео-креатив для Reels, TikTok, Instagram або рекламного запуску.",
-    "from $150",
-  ],
-  [
-    "Ad Storyboard",
-    "Структура, сценарій і розкадровка для рекламного ролика.",
-    "from $80",
-  ],
-];
-
-const capabilities = [
-  "AI video commercials",
-  "Premium product visuals",
-  "Landing pages and portfolio websites",
-  "Corporate presentations",
-  "Sales presentations",
-  "Logo animation",
-  "Architectural exterior renders",
-  "District and real estate visualizations",
-  "PPC creatives",
-  "Cinematic brand storytelling",
-];
-
-const whyNevora = [
+const creationTypes = [
   {
-    title: "Технологічність",
-    text: "NEVORA.AI використовує сучасні AI-інструменти для створення візуалу, який раніше потребував складних зйомок, великих команд і довгого продакшену.",
+    title: "ШІ-відео для реклами",
+    text: "Короткі ролики для Instagram, TikTok, сайту, презентації або запуску продукту.",
   },
   {
-    title: "Маркетинговий підхід",
-    text: "Кожен кадр, блок сайту або презентаційний слайд створюється не просто для краси, а з урахуванням задач бізнесу, уваги клієнта і цілі продажу.",
+    title: "AI-фотосесії товарів",
+    text: "Рекламні зображення товарів без студійної зйомки: для соцмереж, каталогу, сайту або реклами.",
   },
   {
-    title: "Естетика Luxury",
-    text: "Фокус на темному преміальному стилі, атмосфері, світлі, деталях, ритмі, дорогій подачі та візуальній цілісності бренду.",
+    title: "Сайти та landing pages",
+    text: "Сайти-візитки й односторінкові сторінки для брендів, експертів, студій і послуг.",
   },
   {
-    title: "Повний workflow",
-    text: "Від ідеї, концепту, промптів і генерації до монтажу, кольору, сайту, презентації, рекламних матеріалів і фінальної подачі.",
+    title: "Презентації для бізнесу",
+    text: "Корпоративні, sales та pitch-презентації з візуальною структурою і преміальною подачею.",
+  },
+  {
+    title: "Креативи для соцмереж",
+    text: "Банери, відео, рекламні візуали та матеріали для запуску реклами.",
+  },
+  {
+    title: "Анімація логотипу",
+    text: "Коротка анімація бренду для відео, заставок, презентацій або соцмереж.",
   },
 ];
 
-const workingTerms = [
-  "Термін виконання: від 24 до 72 годин залежно від складності задачі.",
-  "У вартість включено 2 ітерації правок.",
-  "Термінове виконання день у день: +50% до вартості.",
-  "Фінальна ціна залежить від складності, тривалості, дедлайну, кількості матеріалів і правок.",
-  "Оплата можлива в USD або в гривні за актуальним курсом.",
+const services = [
+  {
+    title: "AI-фотосесія товару",
+    price: "від $200",
+    text: "5–10 готових зображень для сайту, Instagram, реклами або каталогу.",
+  },
+  {
+    title: "ШІ-рекламний ролик 15–30 сек",
+    price: "від $500",
+    text: "Коротке відео для Instagram, TikTok, сайту або презентації бренду.",
+  },
+  {
+    title: "Кінематографічний AI-ролик до 60 сек",
+    price: "від $850",
+    text: "Атмосферне відео з ідеєю, монтажем, кольором і звуком.",
+  },
+  {
+    title: "Сайт-візитка / Landing page",
+    price: "від $600",
+    text: "Преміальний односторінковий сайт для бренду, експерта або студії.",
+  },
+  {
+    title: "Презентація для бізнесу",
+    price: "від $300",
+    text: "Корпоративна, sales або pitch-презентація з чіткою структурою.",
+  },
+  {
+    title: "Рекламні креативи для соцмереж",
+    price: "від $350",
+    text: "Банери, відео та візуали для Instagram, Facebook, TikTok або Google.",
+  },
+];
+
+const addOns = [
+  "1 AI-зображення — від $40",
+  "Анімація фото — від $60",
+  "Монтаж ролика — від $150",
+  "Анімація логотипу — від $100",
+  "Один рекламний банер — від $50",
+  "Консультація — від $50 / година",
+  "Розгортання сайту на Vercel — від $70",
+  "Один відеокреатив для соцмереж — від $150",
+];
+
+const processSteps = [
+  {
+    title: "1. Ви описуєте задачу",
+    text: "Надсилаєте фото товару, посилання на бренд або коротко пишете, що потрібно: відео, фото, сайт чи презентація.",
+  },
+  {
+    title: "2. Я пропоную ідею",
+    text: "Підбираю стиль, формат і пояснюю, який результат можна отримати для вашого бізнесу.",
+  },
+  {
+    title: "3. Створюю матеріали",
+    text: "Готую AI-зображення, відеокреатив, сайт, презентацію або рекламні матеріали.",
+  },
+  {
+    title: "4. Передаю фінальний результат",
+    text: "Ви отримуєте готові файли для Instagram, сайту, реклами, презентації або запуску продукту.",
+  },
 ];
 
 export default function App() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#050505",
-        color: "white",
-        fontFamily: "Arial, sans-serif",
-        overflow: "hidden",
-      }}
-    >
+    <main style={page}>
       <style>
         {`
           html {
             scroll-behavior: smooth;
           }
 
-          .logo-glow {
-            filter:
-              drop-shadow(0 0 8px rgba(207, 181, 59, 0.22))
-              drop-shadow(0 0 20px rgba(207, 181, 59, 0.14))
-              drop-shadow(0 0 42px rgba(207, 181, 59, 0.08));
-            animation: logoPulse 4s ease-in-out infinite;
+          * {
+            box-sizing: border-box;
           }
 
-          @keyframes logoPulse {
-            0%, 100% {
-              filter:
-                drop-shadow(0 0 8px rgba(207, 181, 59, 0.22))
-                drop-shadow(0 0 20px rgba(207, 181, 59, 0.14))
-                drop-shadow(0 0 42px rgba(207, 181, 59, 0.08));
-            }
-
-            50% {
-              filter:
-                drop-shadow(0 0 14px rgba(207, 181, 59, 0.34))
-                drop-shadow(0 0 34px rgba(207, 181, 59, 0.20))
-                drop-shadow(0 0 58px rgba(207, 181, 59, 0.11));
-            }
+          body {
+            margin: 0;
+            background: #050505;
           }
 
           .premium-card {
             transition: all 0.5s ease;
-            will-change: transform, box-shadow, background;
           }
 
           .premium-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 24px 70px rgba(207, 181, 59, 0.22);
-            border-color: rgba(207, 181, 59, 0.45) !important;
-            background: rgba(255, 255, 255, 0.075) !important;
-          }
-
-          .quiet-card {
-            transition: all 0.5s ease;
-          }
-
-          .quiet-card:hover {
             transform: translateY(-6px);
-            border-color: rgba(207, 181, 59, 0.35) !important;
-            background: rgba(255, 255, 255, 0.065) !important;
+            border-color: rgba(207,181,59,0.45) !important;
+            background: rgba(255,255,255,0.075) !important;
+            box-shadow: 0 24px 70px rgba(207,181,59,0.16);
           }
 
-          .project-card {
-            transition: all 0.5s ease;
+          .image-card img {
+            transition: transform 0.7s ease;
           }
 
-          .project-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 20px 60px rgba(207, 181, 59, 0.16);
-            border-color: rgba(207, 181, 59, 0.35) !important;
+          .image-card:hover img {
+            transform: scale(1.05);
           }
 
-          .project-card img {
-            transition: transform 0.5s ease;
-          }
-
-          .project-card:hover img {
-            transform: scale(1.04);
-          }
-
-          .social-bottom-button {
+          .button-hover {
             transition: all 0.35s ease;
           }
 
-          .social-bottom-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 36px rgba(207, 181, 59, 0.22);
+          .button-hover:hover {
+            transform: translateY(-2px);
           }
 
-          @media (max-width: 700px) {
-            .hero-logo {
-              width: 235px !important;
-              margin-bottom: 10px !important;
-            }
-
-            .footer-socials {
-              justify-content: center !important;
-            }
-
-            .footer-inner {
-              text-align: center !important;
-              justify-content: center !important;
-            }
-
-            .price-row-mobile {
+          @media (max-width: 760px) {
+            .video-card {
               grid-template-columns: 1fr !important;
             }
 
-            .case-card-mobile {
-              padding: 26px !important;
+            .price-row {
+              grid-template-columns: 1fr !important;
+            }
+
+            .hero-title {
+              font-size: 44px !important;
             }
           }
         `}
       </style>
 
-      <section
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "24px 40px 40px",
-          textAlign: "center",
-          position: "relative",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "radial-gradient(circle at 50% 10%, rgba(207,181,59,0.12), transparent 27%), radial-gradient(circle at 30% 10%, rgba(207,181,59,0.07), transparent 24%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05), transparent 22%)",
-            pointerEvents: "none",
-          }}
-        />
+      <section style={heroSection}>
+        <div style={heroGlowOne}></div>
+        <div style={heroGlowTwo}></div>
 
-        <div style={{ maxWidth: "1100px", position: "relative", zIndex: 1 }}>
-          <img
-            src="/images/nevora-logo-final.png"
-            alt="NEVORA AI Creative Studio"
-            className="logo-glow hero-logo"
-            style={{
-              width: "310px",
-              maxWidth: "84vw",
-              height: "auto",
-              display: "block",
-              margin: "0 auto 18px",
-              borderRadius: "0",
-            }}
-          />
+        <div style={heroInner}>
+          <nav style={nav}>
+            <div style={brandMini}>NEVORA.AI</div>
 
-          <h1
-            style={{
-              fontSize: "clamp(42px, 7vw, 82px)",
-              lineHeight: "1.04",
-              margin: "0 auto",
-              maxWidth: "1050px",
-              fontWeight: "700",
-            }}
-          >
-            Преміальний AI-візуал для брендів, які хочуть виглядати незабутньо.
-          </h1>
-
-          <p
-            style={{
-              color: "#cfcfcf",
-              fontSize: "20px",
-              lineHeight: "1.7",
-              maxWidth: "780px",
-              margin: "28px auto 24px",
-            }}
-          >
-            NEVORA.AI створює кінематографічні AI-відео, рекламні креативи,
-            сайти, презентації, анімації логотипів, архітектурні рендери та
-            преміальні візуальні концепти для бізнесу.
-          </p>
-
-          <p
-            style={{
-              color: "#cfb53b",
-              fontSize: "15px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              marginBottom: "28px",
-            }}
-          >
-            Київ / Remote • AI Production • Web • Presentations • Brand Visuals
-          </p>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "16px",
-              flexWrap: "wrap",
-              marginTop: "28px",
-            }}
-          >
-            <a href="#work" style={buttonPrimary}>
-              Дивитися роботи
+            <a href="#contact" style={navButton} className="button-hover">
+              Контакти
             </a>
+          </nav>
 
-            <a href="#pricing" style={buttonSecondary}>
-              Послуги та ціни
-            </a>
+          <div style={heroContent}>
+            <div style={heroLogoBlock}>
+              <div style={heroLogoAura}></div>
+              <img
+                src="/images/nevora-logo.png"
+                alt="NEVORA AI Creative Studio"
+                style={heroLogo}
+              />
+            </div>
 
-            <a href="#contact" style={buttonGold}>
-              Обговорити проєкт
-            </a>
+            <p style={heroCaption}>NEVORA.AI КРЕАТИВНА СТУДІЯ</p>
+
+            <h1 className="hero-title" style={heroTitle}>
+              ШІ-візуал, який допомагає бренду виглядати дорожче.
+            </h1>
+
+            <p style={heroText}>
+              Створюю рекламні AI-відео, фотосесії товарів, сайти, презентації
+              та візуальні матеріали для брендів, яким потрібна сучасна,
+              красива і комерційна подача.
+            </p>
+
+            <div style={heroButtons}>
+              <a href="#videos" style={primaryButton} className="button-hover">
+                Дивитися приклади
+              </a>
+
+              <a href="#pricing" style={secondaryButton} className="button-hover">
+                Послуги та ціни
+              </a>
+
+              <a href="#contact" style={goldButton} className="button-hover">
+                Обговорити проєкт
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "90px 40px", background: "#080808" }}>
-        <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
-          <p style={sectionLabel}>ЧОМУ NEVORA.AI</p>
+      <section style={sectionDark}>
+        <div style={container}>
+          <p style={sectionLabel}>ЩО Я СТВОРЮЮ</p>
 
           <h2 style={sectionTitle}>
-            Не просто AI-генерація, а візуальна режисура з комерційною метою.
+            Візуали для реклами, соцмереж, сайтів і презентацій.
           </h2>
 
-          <div style={gridFour}>
-            {whyNevora.map((item) => (
-              <div key={item.title} className="quiet-card" style={darkCard}>
+          <p style={sectionDescription}>
+            Без складних технічних термінів: ви отримуєте готовий матеріал,
+            який можна використовувати для бренду, запуску продукту, реклами або
+            портфоліо.
+          </p>
+
+          <div style={cardsGrid}>
+            {creationTypes.map((item) => (
+              <div key={item.title} className="premium-card" style={darkCard}>
                 <h3 style={cardTitle}>{item.title}</h3>
                 <p style={paragraph}>{item.text}</p>
               </div>
@@ -484,315 +288,157 @@ export default function App() {
         </div>
       </section>
 
-      <section id="work" style={{ padding: "100px 40px 80px" }}>
-        <p style={sectionLabel}>ПОРТФОЛІО</p>
-
-        <h2 style={sectionTitle}>Вибрані проєкти</h2>
-
-        <p style={sectionDescription}>
-          Дві сильні роботи NEVORA.AI — кінематографічні, атмосферні та емоційно
-          виразні.
-        </p>
-
-        <div style={projectGrid}>
-          {projects.map((project) => (
-            <article
-              key={project.title}
-              className="project-card"
-              style={projectCard}
-            >
-              <div style={imageWrap}>
-                <img src={project.image} alt={project.title} style={imageStyle} />
-              </div>
-
-              <p style={{ color: "#999", marginBottom: "10px", fontSize: "16px" }}>
-                {project.category}
-              </p>
-
-              <h3 style={{ fontSize: "34px", marginTop: 0, marginBottom: "8px" }}>
-                {project.title}
-              </h3>
-
-              <p
-                style={{
-                  color: "#b5b5b5",
-                  fontSize: "18px",
-                  marginTop: 0,
-                  marginBottom: "20px",
-                }}
-              >
-                {project.subtitle}
-              </p>
-
-              <p style={paragraph}>{project.shortConcept}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ padding: "70px 40px 100px" }}>
-        <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
-          {projects.map((project) => (
-            <div
-              key={project.title + " video"}
-              className="case-card-mobile"
-              style={caseCard}
-            >
-              <p style={sectionLabelSmall}>CASE STUDY</p>
-
-              <h2
-                style={{
-                  fontSize: "clamp(32px, 4vw, 44px)",
-                  marginTop: 0,
-                  marginBottom: "12px",
-                }}
-              >
-                {project.title}: {project.subtitle}
-              </h2>
-
-              <p
-                style={{
-                  color: "#CFB53B",
-                  fontSize: "20px",
-                  lineHeight: "1.6",
-                  marginTop: 0,
-                  marginBottom: "30px",
-                  fontWeight: "700",
-                }}
-              >
-                {project.conceptTitle}
-              </p>
-
-              <div style={videoWrap}>
-                <iframe
-                  src={project.youtube}
-                  title={project.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  style={iframeStyle}
-                />
-              </div>
-
-              <div style={{ display: "grid", gap: "26px" }}>
-                <div>
-                  <h3 style={caseSubtitle}>Концепція</h3>
-                  <p style={paragraph}>{project.concept}</p>
-                </div>
-
-                <div>
-                  <h3 style={caseSubtitle}>Процес</h3>
-                  <p style={paragraph}>{project.process}</p>
-                </div>
-
-                <div>
-                  <h3 style={caseSubtitle}>Інструменти та нейромережі</h3>
-
-                  <div style={toolsGrid}>
-                    {project.tools.map((tool) => (
-                      <div key={tool.name} className="quiet-card" style={toolCard}>
-                        <h4
-                          style={{
-                            margin: "0 0 10px",
-                            color: "#CFB53B",
-                            fontSize: "18px",
-                          }}
-                        >
-                          {tool.name}
-                        </h4>
-
-                        <p style={{ ...paragraph, fontSize: "16px", margin: 0 }}>
-                          {tool.text}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ padding: "90px 40px", background: "#080808" }}>
-        <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
-          <p style={sectionLabel}>ДЛЯ БРЕНДІВ, ЯКИМ ПОТРІБНО</p>
+      <section id="videos" style={section}>
+        <div style={container}>
+          <p style={sectionLabel}>ПРИКЛАДИ ВІДЕОКРЕАТИВІВ</p>
 
           <h2 style={sectionTitle}>
-            Преміальний візуал для запусків, реклами, сайтів і продажів.
+            Короткі AI-ролики для брендів і комерційної подачі.
           </h2>
 
-          <div style={pillGrid}>
-            {capabilities.map((item) => (
-              <div key={item} className="quiet-card" style={pill}>
-                {item}
-              </div>
+          <p style={sectionDescription}>
+            Це приклади того, як може виглядати відео для реклами, презентації,
+            соцмереж або іміджевого запуску.
+          </p>
+
+          <div style={{ display: "grid", gap: "34px" }}>
+            {videoWorks.map((video) => (
+              <article key={video.title} className="video-card" style={videoCard}>
+                <div style={videoFrame}>
+                  <iframe
+                    src={video.youtube}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    style={iframeStyle}
+                  />
+                </div>
+
+                <div>
+                  <p style={smallGold}>{video.label}</p>
+                  <h3 style={videoTitle}>{video.title}</h3>
+                  <p style={paragraph}>{video.goal}</p>
+                  <p style={paragraph}>{video.description}</p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section
-        id="pricing"
-        style={{ padding: "100px 40px", background: "#0b0b0b" }}
-      >
-        <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
+      <section id="photo" style={sectionDark}>
+        <div style={container}>
+          <p style={sectionLabel}>AI-ФОТОСЕСІЇ ТОВАРІВ</p>
+
+          <h2 style={sectionTitle}>
+            Рекламні зображення товарів без студійної зйомки.
+          </h2>
+
+          <p style={sectionDescription}>
+            Створюю візуали для Instagram, сайту, каталогу, презентації або
+            запуску бренду. Підходить для прикрас, аксесуарів, косметики,
+            fashion-брендів, нерухомості та преміальних товарів.
+          </p>
+
+          <div style={imageGrid}>
+            {productImages.map((item) => (
+              <article key={item.image} className="image-card" style={imageCard}>
+                <div style={imageWrap}>
+                  <img src={item.image} alt={item.title} style={imageStyle} />
+                </div>
+
+                <h3 style={imageTitle}>{item.title}</h3>
+                <p style={imageText}>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" style={section}>
+        <div style={container}>
           <p style={sectionLabel}>ПОСЛУГИ ТА ЦІНИ</p>
 
-          <h2 style={sectionTitle}>Основні напрямки роботи</h2>
+          <h2 style={sectionTitle}>Прості формати для бізнесу.</h2>
 
           <p style={sectionDescription}>
             Вартість вказана як стартова. Фінальна ціна залежить від складності,
-            дедлайну, кількості матеріалів і рівня деталізації.
+            дедлайну, кількості матеріалів і правок. Оплата можлива в USD або в
+            гривні за актуальним курсом.
           </p>
 
-          <div style={{ display: "grid", gap: "28px" }}>
-            {mainServices.map((group) => (
-              <section key={group.title} className="premium-card" style={serviceGroup}>
-                <h3 style={{ fontSize: "32px", marginTop: 0, marginBottom: "12px" }}>
-                  {group.title}
-                </h3>
-
-                <p style={{ ...paragraph, marginBottom: "28px" }}>
-                  {group.description}
-                </p>
-
-                <div style={{ display: "grid", gap: "14px" }}>
-                  {group.items.map((item) => (
-                    <div
-                      key={item.name}
-                      className="price-row-mobile"
-                      style={priceRow}
-                    >
-                      <div>
-                        <h4 style={{ fontSize: "20px", margin: "0 0 8px" }}>
-                          {item.name}
-                        </h4>
-
-                        <p style={{ ...paragraph, margin: 0, fontSize: "16px" }}>
-                          {item.details}
-                        </p>
-                      </div>
-
-                      <strong
-                        style={{
-                          color: "#CFB53B",
-                          fontSize: "18px",
-                          whiteSpace: "nowrap",
-                        }}
-                      >
-                        {item.price}
-                      </strong>
-                    </div>
-                  ))}
+          <div style={servicesGrid}>
+            {services.map((service) => (
+              <div key={service.title} className="premium-card" style={serviceCard}>
+                <div>
+                  <h3 style={serviceTitle}>{service.title}</h3>
+                  <p style={paragraph}>{service.text}</p>
                 </div>
-              </section>
+
+                <p style={price}>{service.price}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "100px 40px", background: "#050505" }}>
-        <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
-          <p style={sectionLabel}>MICRO-SERVICES & ADD-ONS</p>
+      <section style={sectionDark}>
+        <div style={container}>
+          <p style={sectionLabel}>ДОДАТКОВІ ПОСЛУГИ</p>
 
-          <h2 style={sectionTitle}>Окремі задачі та додаткові послуги</h2>
+          <h2 style={sectionTitle}>Для невеликих задач або тестового старту.</h2>
+
+          <div style={addOnsBox}>
+            {addOns.map((item) => (
+              <div key={item} style={addOnRow}>
+                <span style={dot}></span>
+                <p style={addOnText}>{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={section}>
+        <div style={container}>
+          <p style={sectionLabel}>ЯК ПРОХОДИТЬ РОБОТА</p>
+
+          <h2 style={sectionTitle}>Замовити візуал просто.</h2>
 
           <p style={sectionDescription}>
-            Формат для невеликих задач, швидких правок, тестових проєктів або
-            точкової допомоги з AI-візуалом, відео, сайтом чи рекламою.
+            Ви описуєте задачу — я допомагаю сформувати ідею, створюю матеріали
+            та готую фінальний результат для вашого бренду.
           </p>
 
-          <div style={microGrid}>
-            {microServices.map(([name, details, price]) => (
-              <div key={name} className="quiet-card" style={darkCard}>
-                <h3 style={cardTitle}>{name}</h3>
-
-                <p style={{ ...paragraph, fontSize: "16px" }}>{details}</p>
-
-                <p style={{ color: "#CFB53B", fontWeight: "700", marginTop: "18px" }}>
-                  {price}
-                </p>
+          <div style={processGrid}>
+            {processSteps.map((step) => (
+              <div key={step.title} className="premium-card" style={darkCard}>
+                <h3 style={cardTitle}>{step.title}</h3>
+                <p style={paragraph}>{step.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "90px 40px", background: "#080808" }}>
-        <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
-          <p style={sectionLabel}>УМОВИ СПІВПРАЦІ</p>
+      <footer id="contact" style={footer}>
+        <div style={contactBox}>
+          <p style={contactLabel}>КОНТАКТИ</p>
 
-          <h2 style={sectionTitle}>Прозорий процес і зрозумілі правила</h2>
-
-          <div style={gridFour}>
-            {workingTerms.map((term) => (
-              <div key={term} className="quiet-card" style={darkCard}>
-                <p style={{ ...paragraph, margin: 0 }}>{term}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" style={{ padding: "100px 40px" }}>
-        <div
-          style={{
-            maxWidth: "1180px",
-            margin: "0 auto",
-            border: "1px solid rgba(255,255,255,0.14)",
-            borderRadius: "32px",
-            padding: "60px 40px",
-            background: "white",
-            color: "black",
-            textAlign: "center",
-          }}
-        >
-          <p
-            style={{
-              letterSpacing: "5px",
-              color: "#777",
-              fontSize: "14px",
-              marginBottom: "20px",
-            }}
-          >
-            ГОТОВІ РЕАЛІЗУВАТИ ПРОЄКТ?
-          </p>
-
-          <h2
-            style={{
-              fontSize: "clamp(38px, 5vw, 56px)",
-              lineHeight: "1.1",
-              maxWidth: "850px",
-              margin: "0 auto 30px",
-            }}
-          >
-            Напишіть, щоб отримати індивідуальну пропозицію.
+          <h2 style={contactTitle}>
+            Готові створити візуал для вашого бренду?
           </h2>
 
-          <p
-            style={{
-              color: "#444",
-              fontSize: "18px",
-              lineHeight: "1.7",
-              maxWidth: "650px",
-              margin: "0 auto 36px",
-            }}
-          >
-            Розкажіть коротко про задачу: відео, сайт, презентація, рендери,
-            рекламні креативи або повна візуальна система для бренду.
+          <p style={contactText}>
+            Напишіть коротко, що вам потрібно: AI-відео, фотосесія товару,
+            сайт, презентація або рекламні креативи.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "16px",
-              flexWrap: "wrap",
-            }}
-          >
+          <div style={contactButtons}>
             <a
               href="mailto:nevora.aistudio@gmail.com?subject=Запит на проєкт NEVORA.AI"
               style={contactBlack}
+              className="button-hover"
             >
               Написати на email
             </a>
@@ -801,199 +447,353 @@ export default function App() {
               href="https://t.me/nevora_ai"
               target="_blank"
               rel="noreferrer"
-              style={contactGold}
+              style={contactWhite}
+              className="button-hover"
             >
-              Telegram @nevora_ai
-            </a>
-          </div>
-
-          <p style={{ marginTop: "28px", color: "#555", fontSize: "16px" }}>
-            nevora.aistudio@gmail.com
-          </p>
-
-          <p style={{ marginTop: "8px", color: "#777", fontSize: "15px" }}>
-            Київ / Remote
-          </p>
-        </div>
-      </section>
-
-      <footer
-        style={{
-          padding: "46px 40px",
-          color: "#777",
-          background: "#050505",
-          borderTop: "1px solid rgba(255,255,255,0.10)",
-        }}
-      >
-        <div
-          className="footer-inner"
-          style={{
-            maxWidth: "1180px",
-            margin: "0 auto",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "24px",
-            flexWrap: "wrap",
-          }}
-        >
-          <div>
-            <p style={{ margin: "0 0 8px", color: "#aaa", fontSize: "14px" }}>
-              © 2026 NEVORA.AI Creative Studio. All rights reserved.
-            </p>
-
-            <p style={{ margin: 0, color: "#666", fontSize: "14px" }}>
-              AI Video • Websites • Presentations • Logo Animation • Renders
-            </p>
-          </div>
-
-          <div
-            className="footer-socials"
-            style={{
-              display: "flex",
-              gap: "14px",
-              flexWrap: "wrap",
-              justifyContent: "flex-end",
-            }}
-          >
-            <a
-              href="https://t.me/nevora_ai"
-              target="_blank"
-              rel="noreferrer"
-              className="social-bottom-button"
-              style={telegramButton}
-            >
-              Telegram @nevora_ai
+              Telegram
             </a>
 
             <a
               href="https://www.instagram.com/nevora.ai/"
               target="_blank"
               rel="noreferrer"
-              className="social-bottom-button"
-              style={instagramButton}
+              style={contactWhite}
+              className="button-hover"
             >
               Instagram
             </a>
           </div>
+
+          <p style={contactInfo}>nevora.aistudio@gmail.com</p>
+          <p style={contactInfo}>Telegram: @nevora_ai</p>
+          <p style={contactInfo}>Київ / Remote</p>
+        </div>
+
+        <div style={footerBottom}>
+          <p>© 2026 NEVORA.AI Creative Studio. All rights reserved.</p>
+          <p>AI-відео • AI-фотосесії • Сайти • Презентації • Реклама</p>
         </div>
       </footer>
     </main>
   );
 }
 
-const buttonPrimary = {
+const page = {
+  minHeight: "100vh",
+  background: "#050505",
+  color: "white",
+  fontFamily:
+    "Inter, Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+  overflow: "hidden",
+};
+
+const heroSection = {
+  position: "relative",
+  minHeight: "100vh",
+  overflow: "hidden",
+  background:
+    "linear-gradient(135deg, #050505 0%, #090909 45%, #050505 100%)",
+};
+
+const heroGlowOne = {
+  position: "absolute",
+  width: "700px",
+  height: "700px",
+  borderRadius: "50%",
+  background:
+    "radial-gradient(circle, rgba(207,181,59,0.16), rgba(207,181,59,0.04) 42%, transparent 70%)",
+  top: "-220px",
+  left: "50%",
+  transform: "translateX(-50%)",
+  filter: "blur(20px)",
+};
+
+const heroGlowTwo = {
+  position: "absolute",
+  width: "520px",
+  height: "520px",
+  borderRadius: "50%",
+  background:
+    "radial-gradient(circle, rgba(255,255,255,0.08), rgba(255,255,255,0.02) 42%, transparent 70%)",
+  right: "-180px",
+  bottom: "10%",
+  filter: "blur(18px)",
+};
+
+const heroInner = {
+  position: "relative",
+  zIndex: 2,
+  maxWidth: "1240px",
+  minHeight: "100vh",
+  margin: "0 auto",
+  padding: "28px 24px 80px",
+  display: "flex",
+  flexDirection: "column",
+};
+
+const nav = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: "20px",
+};
+
+const brandMini = {
+  color: "#d8d8d8",
+  fontSize: "14px",
+  letterSpacing: "0.32em",
+  fontWeight: "600",
+};
+
+const navButton = {
+  color: "white",
+  textDecoration: "none",
+  border: "1px solid rgba(255,255,255,0.18)",
+  borderRadius: "999px",
+  padding: "12px 20px",
+  fontSize: "14px",
+  background: "rgba(255,255,255,0.04)",
+};
+
+const heroContent = {
+  flex: 1,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  textAlign: "center",
+  paddingTop: "70px",
+};
+
+const heroLogoBlock = {
+  position: "relative",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "min(360px, 78vw)",
+  marginBottom: "20px",
+};
+
+const heroLogoAura = {
+  position: "absolute",
+  width: "360px",
+  height: "260px",
+  borderRadius: "50%",
+  background:
+    "radial-gradient(circle, rgba(207,181,59,0.32) 0%, rgba(207,181,59,0.16) 32%, rgba(207,181,59,0.06) 58%, transparent 78%)",
+  filter: "blur(34px)",
+  zIndex: 1,
+};
+
+const heroLogo = {
+  position: "relative",
+  zIndex: 2,
+  width: "min(300px, 72vw)",
+  height: "auto",
+  display: "block",
+  objectFit: "contain",
+  filter:
+    "drop-shadow(0 0 12px rgba(207,181,59,0.36)) drop-shadow(0 0 34px rgba(207,181,59,0.24)) drop-shadow(0 16px 42px rgba(0,0,0,0.85))",
+};
+
+const heroCaption = {
+  margin: "0 0 34px",
+  color: "#ededed",
+  fontSize: "clamp(12px, 2vw, 17px)",
+  letterSpacing: "0.42em",
+  textTransform: "uppercase",
+  opacity: 0.95,
+};
+
+const heroTitle = {
+  maxWidth: "1040px",
+  margin: 0,
+  fontSize: "clamp(46px, 7vw, 86px)",
+  lineHeight: "0.98",
+  letterSpacing: "-0.06em",
+  fontWeight: "760",
+};
+
+const heroText = {
+  maxWidth: "760px",
+  margin: "30px auto 0",
+  color: "#cfcfcf",
+  fontSize: "20px",
+  lineHeight: "1.7",
+};
+
+const heroButtons = {
+  display: "flex",
+  justifyContent: "center",
+  flexWrap: "wrap",
+  gap: "14px",
+  marginTop: "42px",
+};
+
+const primaryButton = {
   background: "white",
   color: "black",
   textDecoration: "none",
   borderRadius: "999px",
-  padding: "18px 32px",
+  padding: "17px 28px",
   fontSize: "16px",
-  display: "inline-block",
+  fontWeight: "700",
+  display: "inline-flex",
 };
 
-const buttonSecondary = {
-  background: "transparent",
+const secondaryButton = {
+  background: "rgba(255,255,255,0.04)",
   color: "white",
   textDecoration: "none",
-  border: "1px solid rgba(255,255,255,0.25)",
+  border: "1px solid rgba(255,255,255,0.18)",
   borderRadius: "999px",
-  padding: "18px 32px",
+  padding: "17px 28px",
   fontSize: "16px",
-  display: "inline-block",
+  display: "inline-flex",
 };
 
-const buttonGold = {
+const goldButton = {
   background: "#CFB53B",
   color: "black",
   textDecoration: "none",
   borderRadius: "999px",
-  padding: "18px 32px",
+  padding: "17px 28px",
   fontSize: "16px",
-  display: "inline-block",
   fontWeight: "700",
+  display: "inline-flex",
 };
 
-const sectionLabel = {
-  letterSpacing: "5px",
-  color: "#b5b5b5",
-  fontSize: "14px",
-  marginTop: "0",
-  marginBottom: "18px",
-  textAlign: "center",
+const section = {
+  padding: "100px 24px",
+  background: "#050505",
 };
 
-const sectionLabelSmall = {
-  letterSpacing: "4px",
-  color: "#999",
-  fontSize: "13px",
-  marginBottom: "16px",
+const sectionDark = {
+  padding: "100px 24px",
+  background: "#080808",
 };
 
-const sectionTitle = {
-  fontSize: "clamp(38px, 5vw, 60px)",
-  textAlign: "center",
-  marginBottom: "20px",
-  fontWeight: "700",
-};
-
-const sectionDescription = {
-  color: "#cfcfcf",
-  textAlign: "center",
-  maxWidth: "760px",
-  margin: "0 auto 60px",
-  lineHeight: "1.7",
-  fontSize: "18px",
-};
-
-const paragraph = {
-  color: "#cfcfcf",
-  lineHeight: "1.8",
-  fontSize: "17px",
-};
-
-const gridFour = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-  gap: "18px",
-  marginTop: "50px",
-};
-
-const darkCard = {
-  border: "1px solid rgba(255,255,255,0.14)",
-  borderRadius: "24px",
-  padding: "24px",
-  background: "rgba(255,255,255,0.04)",
-};
-
-const cardTitle = {
-  fontSize: "22px",
-  marginTop: 0,
-  marginBottom: "12px",
-};
-
-const projectGrid = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-  gap: "28px",
+const container = {
   maxWidth: "1180px",
   margin: "0 auto",
 };
 
-const projectCard = {
-  border: "1px solid rgba(255,255,255,0.14)",
-  borderRadius: "28px",
-  padding: "28px",
+const sectionLabel = {
+  color: "#CFB53B",
+  textAlign: "center",
+  letterSpacing: "0.34em",
+  fontSize: "13px",
+  fontWeight: "700",
+  margin: "0 0 18px",
+};
+
+const sectionTitle = {
+  color: "white",
+  textAlign: "center",
+  fontSize: "clamp(34px, 5vw, 58px)",
+  lineHeight: "1.08",
+  letterSpacing: "-0.04em",
+  margin: "0 auto 20px",
+  maxWidth: "920px",
+};
+
+const sectionDescription = {
+  color: "#c7c7c7",
+  textAlign: "center",
+  fontSize: "18px",
+  lineHeight: "1.75",
+  maxWidth: "760px",
+  margin: "0 auto 58px",
+};
+
+const cardsGrid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+  gap: "18px",
+};
+
+const darkCard = {
+  border: "1px solid rgba(255,255,255,0.13)",
+  borderRadius: "26px",
+  padding: "26px",
   background: "rgba(255,255,255,0.04)",
+};
+
+const cardTitle = {
+  margin: "0 0 12px",
+  color: "white",
+  fontSize: "22px",
+  letterSpacing: "-0.02em",
+};
+
+const paragraph = {
+  color: "#cfcfcf",
+  fontSize: "16px",
+  lineHeight: "1.75",
+  margin: 0,
+};
+
+const videoCard = {
+  display: "grid",
+  gridTemplateColumns: "1.2fr 0.8fr",
+  gap: "28px",
+  alignItems: "center",
+  border: "1px solid rgba(255,255,255,0.13)",
+  borderRadius: "30px",
+  padding: "24px",
+  background: "rgba(255,255,255,0.04)",
+};
+
+const videoFrame = {
+  position: "relative",
+  width: "100%",
+  paddingTop: "56.25%",
   overflow: "hidden",
+  borderRadius: "22px",
+  background: "#111",
+};
+
+const iframeStyle = {
+  position: "absolute",
+  inset: 0,
+  width: "100%",
+  height: "100%",
+  border: 0,
+};
+
+const smallGold = {
+  color: "#CFB53B",
+  fontSize: "14px",
+  fontWeight: "700",
+  letterSpacing: "0.08em",
+  textTransform: "uppercase",
+  margin: "0 0 12px",
+};
+
+const videoTitle = {
+  color: "white",
+  fontSize: "34px",
+  lineHeight: "1.1",
+  margin: "0 0 18px",
+  letterSpacing: "-0.03em",
+};
+
+const imageGrid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+  gap: "18px",
+};
+
+const imageCard = {
+  overflow: "hidden",
+  border: "1px solid rgba(255,255,255,0.13)",
+  borderRadius: "28px",
+  background: "rgba(255,255,255,0.04)",
 };
 
 const imageWrap = {
-  width: "100%",
-  height: "260px",
-  borderRadius: "20px",
+  height: "390px",
   overflow: "hidden",
-  marginBottom: "28px",
   background: "#111",
 };
 
@@ -1004,89 +804,132 @@ const imageStyle = {
   display: "block",
 };
 
-const caseCard = {
-  border: "1px solid rgba(255,255,255,0.14)",
-  borderRadius: "32px",
-  padding: "42px",
-  background: "rgba(255,255,255,0.04)",
-  marginBottom: "36px",
+const imageTitle = {
+  color: "white",
+  fontSize: "20px",
+  margin: "22px 22px 10px",
 };
 
-const caseSubtitle = {
+const imageText = {
+  color: "#c7c7c7",
+  fontSize: "15px",
+  lineHeight: "1.65",
+  margin: "0 22px 24px",
+};
+
+const servicesGrid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+  gap: "18px",
+};
+
+const serviceCard = {
+  minHeight: "240px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  border: "1px solid rgba(255,255,255,0.13)",
+  borderRadius: "28px",
+  padding: "28px",
+  background:
+    "linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025))",
+};
+
+const serviceTitle = {
   color: "white",
   fontSize: "24px",
   margin: "0 0 12px",
+  letterSpacing: "-0.03em",
 };
 
-const toolsGrid = {
+const price = {
+  color: "#CFB53B",
+  fontSize: "22px",
+  fontWeight: "800",
+  margin: "28px 0 0",
+};
+
+const addOnsBox = {
+  maxWidth: "860px",
+  margin: "0 auto",
+  border: "1px solid rgba(255,255,255,0.13)",
+  borderRadius: "30px",
+  padding: "26px",
+  background: "rgba(255,255,255,0.04)",
+};
+
+const addOnRow = {
+  display: "flex",
+  alignItems: "center",
+  gap: "14px",
+  borderBottom: "1px solid rgba(255,255,255,0.08)",
+  padding: "15px 0",
+};
+
+const dot = {
+  width: "8px",
+  height: "8px",
+  borderRadius: "50%",
+  background: "#CFB53B",
+  flex: "0 0 auto",
+};
+
+const addOnText = {
+  color: "#e0e0e0",
+  fontSize: "17px",
+  margin: 0,
+};
+
+const processGrid = {
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-  gap: "16px",
-};
-
-const toolCard = {
-  border: "1px solid rgba(255,255,255,0.12)",
-  borderRadius: "22px",
-  padding: "22px",
-  background: "rgba(255,255,255,0.035)",
-};
-
-const videoWrap = {
-  position: "relative",
-  width: "100%",
-  paddingTop: "56.25%",
-  borderRadius: "24px",
-  overflow: "hidden",
-  marginBottom: "36px",
-  background: "#111",
-};
-
-const iframeStyle = {
-  position: "absolute",
-  inset: 0,
-  width: "100%",
-  height: "100%",
-  border: "0",
-};
-
-const pillGrid = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-  gap: "16px",
-  marginTop: "50px",
-};
-
-const pill = {
-  border: "1px solid rgba(255,255,255,0.14)",
-  borderRadius: "999px",
-  padding: "18px 22px",
-  background: "rgba(255,255,255,0.04)",
-  textAlign: "center",
-  color: "#d6d6d6",
-  fontSize: "16px",
-};
-
-const serviceGroup = {
-  border: "1px solid rgba(255,255,255,0.14)",
-  borderRadius: "30px",
-  padding: "32px",
-  background:
-    "linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025))",
-};
-
-const priceRow = {
-  display: "grid",
-  gridTemplateColumns: "1fr auto",
-  gap: "24px",
-  alignItems: "start",
-  borderTop: "1px solid rgba(255,255,255,0.12)",
-  padding: "20px 0",
-};
-
-const microGrid = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
   gap: "18px",
+};
+
+const footer = {
+  padding: "100px 24px 32px",
+  background: "#050505",
+};
+
+const contactBox = {
+  maxWidth: "1180px",
+  margin: "0 auto",
+  background: "white",
+  color: "black",
+  borderRadius: "34px",
+  padding: "64px 34px",
+  textAlign: "center",
+};
+
+const contactLabel = {
+  color: "#777",
+  fontSize: "13px",
+  fontWeight: "700",
+  letterSpacing: "0.34em",
+  margin: "0 0 18px",
+};
+
+const contactTitle = {
+  maxWidth: "820px",
+  margin: "0 auto 22px",
+  fontSize: "clamp(34px, 5vw, 58px)",
+  lineHeight: "1.08",
+  letterSpacing: "-0.05em",
+};
+
+const contactText = {
+  maxWidth: "660px",
+  margin: "0 auto 34px",
+  color: "#555",
+  fontSize: "18px",
+  lineHeight: "1.7",
+};
+
+const contactButtons = {
+  display: "flex",
+  justifyContent: "center",
+  flexWrap: "wrap",
+  gap: "14px",
 };
 
 const contactBlack = {
@@ -1094,41 +937,35 @@ const contactBlack = {
   color: "white",
   textDecoration: "none",
   borderRadius: "999px",
-  padding: "18px 32px",
+  padding: "17px 28px",
   fontSize: "16px",
-  display: "inline-block",
-};
-
-const contactGold = {
-  background: "#CFB53B",
-  color: "black",
-  textDecoration: "none",
-  borderRadius: "999px",
-  padding: "18px 32px",
-  fontSize: "16px",
-  display: "inline-block",
   fontWeight: "700",
 };
 
-const telegramButton = {
-  background: "#CFB53B",
-  color: "black",
-  textDecoration: "none",
-  borderRadius: "999px",
-  padding: "16px 26px",
-  fontSize: "15px",
-  display: "inline-block",
-  fontWeight: "700",
-  border: "1px solid rgba(207,181,59,0.75)",
-};
-
-const instagramButton = {
+const contactWhite = {
   background: "transparent",
-  color: "white",
+  color: "black",
   textDecoration: "none",
-  border: "1px solid rgba(207,181,59,0.55)",
+  border: "1px solid rgba(0,0,0,0.2)",
   borderRadius: "999px",
-  padding: "16px 26px",
+  padding: "17px 28px",
+  fontSize: "16px",
+  fontWeight: "700",
+};
+
+const contactInfo = {
+  color: "#666",
+  margin: "16px 0 0",
   fontSize: "15px",
-  display: "inline-block",
+};
+
+const footerBottom = {
+  maxWidth: "1180px",
+  margin: "28px auto 0",
+  display: "flex",
+  justifyContent: "space-between",
+  gap: "18px",
+  flexWrap: "wrap",
+  color: "#777",
+  fontSize: "14px",
 };
